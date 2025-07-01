@@ -79,7 +79,7 @@
             opacity: 0;
             animation: fadeInUp 2.0s ease-out 1.5s forwards;
         }
-        .features, .links-section {
+        .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
@@ -88,7 +88,7 @@
             opacity: 0;
             animation: fadeInUp 2.5s ease-out 1.5s forwards;
         }
-        .feature-box, .link-box {
+        .feature-box {
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid rgba(113, 29, 77, 0.8);
             padding: 25px 20px;
@@ -98,7 +98,7 @@
             transition: all 0.3s ease;
             text-align: center;
         }
-        .feature-box:hover, .link-box:hover {
+        .feature-box:hover {
             background: rgba(113, 29, 77, 0.3);
             border-color: rgba(113, 29, 77, 1);
             transform: translateY(-5px);
@@ -128,16 +128,44 @@
             color: white;
             line-height: 1.3;
         }
-        .link-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #711D4D;
+        .links-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 40px 0;
+            opacity: 0;
+            animation: fadeInUp 2.5s ease-out 1.5s forwards;
         }
-        .link-box a {
+        .link-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(113, 29, 77, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .link-box h3 {
+            color: #711D4D;
+            margin-bottom: 15px;
+        }
+        .link-box a.button {
+            display: inline-block;
+            background: linear-gradient(135deg, #002060, #711D4D);
             color: white;
-            text-decoration: underline;
-            font-size: 0.95rem;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 10px;
+        }
+        .link-box a.button:hover {
+            background: linear-gradient(135deg, #711D4D, #002060);
+            transform: translateY(-2px);
         }
         .beta-section {
             background: rgba(0, 0, 0, 0.7);
@@ -219,7 +247,8 @@
         @media (max-width: 768px) {
             .logo { font-size: 3rem; }
             h1 { font-size: 2.2rem; }
-            .features, .links-section { grid-template-columns: 1fr; gap: 20px; }
+            .features { grid-template-columns: 1fr; gap: 20px; }
+            .links-section { gap: 20px; }
             .beta-section { padding: 30px 20px; }
         }
     </style>
@@ -250,17 +279,18 @@
 
         <div class="links-section">
             <div class="link-box">
-                <div class="link-title">Shop Physical Products</div>
-                <a href="https://your-shopify-url.com" target="_blank">Visit Our Shopify Store</a>
+                <h3>Shop Physical Products</h3>
+                <a href="https://your-shopify-url.com" class="button" target="_blank">Visit Our Shopify Store</a>
             </div>
             <div class="link-box">
-                <div class="link-title">Explore Kindle Books</div>
-                <a href="https://www.amazon.com/author/your-author-page" target="_blank">See on Amazon</a>
+                <h3>Explore Kindle Books</h3>
+                <a href="https://www.amazon.com/author/your-author-page" class="button" target="_blank">See on Amazon</a>
             </div>
             <div class="link-box">
-                <div class="link-title">Get Our Apps</div>
-                <a href="https://apps.apple.com/app/your-app-id" target="_blank">Download on the App Store</a><br>
-                <a href="https://play.google.com/store/apps/details?id=your.app.id" target="_blank">Get it on Google Play</a>
+                <h3>Get Our Apps</h3>
+                <a href="https://apps.apple.com/app/your-app-id" class="button" target="_blank">Download on the App Store</a>
+                <br><br>
+                <a href="https://play.google.com/store/apps/details?id=your.app.id" class="button" target="_blank">Get it on Google Play</a>
             </div>
         </div>
 
@@ -281,3 +311,4 @@
     </div>
 </body>
 </html>
+
