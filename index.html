@@ -128,45 +128,6 @@
             color: white;
             line-height: 1.3;
         }
-        .links-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin: 40px 0;
-            opacity: 0;
-            animation: fadeInUp 2.5s ease-out 1.5s forwards;
-        }
-        .link-box {
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid rgba(113, 29, 77, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-        .link-box h3 {
-            color: #711D4D;
-            margin-bottom: 15px;
-        }
-        .link-box a.button {
-            display: inline-block;
-            background: linear-gradient(135deg, #002060, #711D4D);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.3s ease, transform 0.3s ease;
-            margin-top: 10px;
-        }
-        .link-box a.button:hover {
-            background: linear-gradient(135deg, #711D4D, #002060);
-            transform: translateY(-2px);
-        }
         .beta-section {
             background: rgba(0, 0, 0, 0.7);
             border: 2px solid rgba(113, 29, 77, 0.8);
@@ -248,7 +209,6 @@
             .logo { font-size: 3rem; }
             h1 { font-size: 2.2rem; }
             .features { grid-template-columns: 1fr; gap: 20px; }
-            .links-section { gap: 20px; }
             .beta-section { padding: 30px 20px; }
         }
     </style>
@@ -276,24 +236,6 @@
                 <div class="feature-desc">From stories to software to workspace upgrades</div>
             </div>
         </div>
-
-        <div class="links-section">
-            <div class="link-box">
-                <h3>Shop Physical Products</h3>
-                <a href="https://your-shopify-url.com" class="button" target="_blank">Visit Our Shopify Store</a>
-            </div>
-            <div class="link-box">
-                <h3>Explore Kindle Books</h3>
-                <a href="https://www.amazon.com/author/your-author-page" class="button" target="_blank">See on Amazon</a>
-            </div>
-            <div class="link-box">
-                <h3>Get Our Apps</h3>
-                <a href="https://apps.apple.com/app/your-app-id" class="button" target="_blank">Download on the App Store</a>
-                <br><br>
-                <a href="https://play.google.com/store/apps/details?id=your.app.id" class="button" target="_blank">Get it on Google Play</a>
-            </div>
-        </div>
-
         <div class="beta-section">
             <div class="launch-date">Launching Soon</div>
             <p class="beta-text">
@@ -303,7 +245,6 @@
                 Get Updates
             </a>
         </div>
-
         <div class="contact">
             <p>Questions? Reach us at <strong>merch@islemonics.store</strong></p>
             <p style="margin-top: 20px; font-size: 0.9rem;">Workspace gear, stories & software — built by Islemonics</p>
